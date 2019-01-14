@@ -1,0 +1,54 @@
+markingEvent
+  year [18/19|...]
+  moduleCode
+  nofItems
+  assessment [exam|essay]
+  weightNumber [500|1500|...]
+  weightType [words|hours]
+  CATS
+  dateAvailable
+  dateDue
+  moduleLeaders
+  requiresModeration
+  isUndergraduate
+  isFirstYear
+  completed
+
+person
+  name [dairmuidCostello|...]
+  code [DC|...]
+
+personWeight
+  personId
+  loadTarget     [.87|1.1|...]
+  year
+
+candidateMarker
+  personId
+  markingEventId
+  proportionToMark
+  year
+
+markingAssignmentLog
+  year
+  markingAssignment
+  date
+  [stores draft marking assignments when one is selected; most recent is used!]
+
+markingAssignment
+  [generated]
+  [each markingEvent gets 1.0 candidateMarkers assigned]
+
+calculateTotalWeight = (year) ->
+  zip through all markingEvent and `getLoad`
+
+generateMarkingAssignments = (year) ->
+
+getLoads = (markingAssignment) ->
+
+
+
+
+  
+  
+  
